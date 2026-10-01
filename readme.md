@@ -8,7 +8,7 @@ El objetivo del proyecto es desarrollar una versión sencilla y funcional del cl
 
 ## Estado del proyecto
 
-Actualmente se encuentra implementada la base visual del escenario y sus límites físicos.
+Actualmente se encuentran integrados los límites del escenario y la lógica básica de Snake.
 
 ### Implementado
 
@@ -20,22 +20,13 @@ Actualmente se encuentra implementada la base visual del escenario y sus límite
 - Uso de `Box Collider 2D` en las paredes.
 - Tag `Pared` para identificar los límites del escenario.
 - Preparación del escenario para detectar la colisión de la serpiente con los bordes.
+- Serpiente con movimiento automático por cuadrícula y controles de dirección.
+- Comida que aparece en celdas libres, crecimiento y puntuación de un punto por manzana.
+- Game Over al alcanzar el borde o el propio cuerpo, con reinicio mediante `R`.
 - Control de versiones mediante Git y GitHub.
 - Rama `develop` utilizada para integrar el desarrollo.
 
-### Pendiente
-
-- Implementación de la serpiente.
-- Movimiento de la serpiente.
-- Generación de comida.
-- Crecimiento de la serpiente.
-- Detección de colisión con la comida.
-- Detección de colisión de la serpiente consigo misma.
-- Sistema de puntuación.
-- Lógica de Game Over.
-- Reinicio de partida.
-- Interfaz de usuario.
-- Sonidos y efectos, en caso de ser requeridos.
+La comprobación del juego en Play Mode queda pendiente de las pruebas manuales del equipo.
 
 ---
 
@@ -74,9 +65,14 @@ GameJam/
 │   │   │
 │   │   ├── Interfaz/
 │   │   └── Sprite/
+│   │       └── Snake_Assets_Completo (2).aseprite
 │   │
 │   ├── Scenes/
 │   │   └── SampleScene.unity
+│   │
+│   ├── Scripts/
+│   │   └── Serpiente/
+│   │       └── ControladorSerpiente.cs
 │   │
 │   └── Settings/
 │
@@ -118,20 +114,25 @@ Assets/Scenes/SampleScene.unity
 
 La escena contiene los elementos principales del entorno del juego.
 
-La organización esperada es:
+La organización actual es:
 
 ```text
 SampleScene
 │
 ├── Main Camera
 ├── Global Light 2D
-├── Fondo
-│
-└── Paredes
-    ├── Pared Superior
-    ├── Pared Inferior
-    ├── Pared Izquierda
-    └── Pared Derecha
+├── snake
+├── Paredes
+│   ├── Pared Superior
+│   ├── Pared Inferior
+│   ├── Pared Izquierda
+│   └── Pared Derecha
+├── Serpiente
+│   ├── Cabeza
+│   ├── Segmento_01
+│   ├── Segmento_02
+│   └── Cola
+└── Comida
 ```
 
 ---
@@ -211,7 +212,7 @@ Pared Izquierda  -> Pared
 Pared Derecha    -> Pared
 ```
 
-Esto permitirá identificar fácilmente una colisión entre la serpiente y cualquiera de los límites.
+El Tag se conserva en las paredes. El controlador actual obtiene el área jugable de sus `Box Collider 2D` sin cambiar sus posiciones, tamaños ni configuración.
 
 La configuración del Tag se almacena dentro de:
 
@@ -225,52 +226,29 @@ Por esta razón, este archivo debe mantenerse dentro del repositorio.
 
 # Detección de colisiones
 
-Para que Unity detecte una colisión entre la serpiente y las paredes, la cabeza de la serpiente deberá disponer posteriormente de componentes compatibles con el sistema de físicas 2D.
+`ControladorSerpiente` toma los bordes interiores de los colliders de las cuatro paredes y construye una cuadrícula dentro de ellos. La serpiente avanza cambiando posiciones entre celdas; no utiliza físicas para moverse.
 
-La configuración prevista es:
-
-```text
-CabezaSerpiente
-├── Sprite Renderer
-├── Box Collider 2D
-└── Rigidbody 2D
-```
-
-Una posible configuración del `Rigidbody 2D` para Snake es:
-
-```text
-Gravity Scale: 0
-```
-
-El tipo de cuerpo dependerá finalmente del sistema utilizado para mover la serpiente.
+Hay Game Over si la siguiente celda de la cabeza está fuera de esa cuadrícula o está ocupada por su cuerpo. Se permite entrar en la celda que libera la cola durante un paso normal.
 
 ---
 
-## Detección de una pared mediante C#
+## Controles y reglas
 
-La lógica de Game Over todavía debe integrarse con el controlador de la serpiente.
+- `W` o flecha arriba, `S` o flecha abajo, `A` o flecha izquierda, `D` o flecha derecha: cambiar dirección. No se permite girar 180° en un paso.
+- La serpiente se mueve automáticamente a intervalos regulares. `Pasos Por Segundo` y `Tamano Celda` se pueden ajustar desde el Inspector de `Serpiente`.
+- La manzana roja aparece solo en celdas libres. Al comerla, la serpiente conserva la posición anterior de la cola como segmento nuevo, suma **1 punto** y genera otra manzana.
+- La puntuación se muestra en pantalla. Al perder, el movimiento se detiene y aparece `GAME OVER`.
+- `R` tras Game Over: vuelve a la serpiente inicial de cuatro partes, pone la puntuación a cero y genera comida nueva.
 
-Un ejemplo de detección de una pared sería:
+La cabeza y la cola cambian de sprite según su dirección. El cuerpo utiliza las variantes horizontal y vertical; las curvas de la hoja no se usan en esta versión sencilla. El controlador está en `Assets/Scripts/Serpiente/ControladorSerpiente.cs`.
 
-```csharp
-private void OnCollisionEnter2D(Collision2D collision)
-{
-    if (collision.gameObject.CompareTag("Pared"))
-    {
-        Debug.Log("Game Over");
-    }
-}
-```
-
-Esta lógica permite identificar cualquier objeto que tenga asignado el Tag `Pared`.
-
-El comportamiento final de Game Over deberá ser gestionado posteriormente por el sistema encargado del estado de la partida.
+Sprites utilizados: `Cabeza_Arriba`, `Cabeza_Abajo`, `Cabeza_Izquierda`, `Cabeza_Derecha`, `Cuerpo_Horizontal`, `Cuerpo_Vertical`, `Cola_Arriba`, `Cola_Abajo`, `Cola_Izquierda`, `Cola_Derecha` y `Manzana_Roja`.
 
 ---
 
-# Funcionamiento esperado del juego
+# Funcionamiento del juego
 
-El flujo general previsto para Snake es:
+El flujo implementado para Snake es:
 
 ```text
 Inicio
@@ -612,9 +590,9 @@ Esto evita subir configuraciones locales o modificaciones generadas accidentalme
 Actualmente el escenario dispone de:
 
 ```text
-Fondo
+snake
 │
-└── Imagen principal del tablero
+└── Objeto existente del escenario
 
 Paredes
 │
@@ -622,17 +600,21 @@ Paredes
 ├── Inferior ─────── Box Collider 2D
 ├── Izquierda ────── Box Collider 2D
 └── Derecha ──────── Box Collider 2D
+
+Serpiente
+│
+├── Cabeza
+├── Segmento_01
+├── Segmento_02
+└── Cola
+
+Comida
+└── Manzana_Roja
 ```
 
 Las paredes delimitan el área jugable.
 
-La siguiente etapa consiste en integrar la serpiente y comprobar que su cabeza detecte correctamente el Tag:
-
-```text
-Pared
-```
-
-para ejecutar el sistema de Game Over.
+`Serpiente` y `Comida` se encuentran dentro del área delimitada por las paredes. El controlador comprueba los bordes mediante la cuadrícula calculada a partir de los colliders existentes.
 
 ---
 
