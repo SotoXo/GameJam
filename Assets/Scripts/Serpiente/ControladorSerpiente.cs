@@ -236,6 +236,7 @@ public class ControladorSerpiente : MonoBehaviour
                     continue;
 
                 celdaComida = celda;
+                comida.sortingOrder = 1;
                 comida.sprite = manzanaRoja;
                 comida.transform.position = Posicion(celda);
                 return true;
