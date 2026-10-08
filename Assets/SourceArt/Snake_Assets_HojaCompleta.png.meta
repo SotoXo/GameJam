@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: 1f8f227786fc79b458f66faacb073bd9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2309843140421783026
+    second: Snake_Assets_HojaCompleta_0
+  - first:
+      213: -7105869857136620247
+    second: Snake_Assets_HojaCompleta_1
+  - first:
+      213: -5964174105791033289
+    second: Snake_Assets_HojaCompleta_2
+  - first:
+      213: 370308595237007961
+    second: Snake_Assets_HojaCompleta_3
+  - first:
+      213: 5357799273322529620
+    second: Snake_Assets_HojaCompleta_4
+  - first:
+      213: 9097842918286164466
+    second: Snake_Assets_HojaCompleta_5
+  - first:
+      213: 4533705243637547752
+    second: Snake_Assets_HojaCompleta_6
+  - first:
+      213: -642398664625909229
+    second: Snake_Assets_HojaCompleta_7
+  - first:
+      213: -1359605504153453187
+    second: Snake_Assets_HojaCompleta_8
+  - first:
+      213: 6208792489102895031
+    second: Snake_Assets_HojaCompleta_9
+  - first:
+      213: 1457212103162294541
+    second: Snake_Assets_HojaCompleta_10
+  - first:
+      213: -1828879882601311020
+    second: Snake_Assets_HojaCompleta_11
+  - first:
+      213: 1908679890557413776
+    second: Snake_Assets_HojaCompleta_12
+  - first:
+      213: 7256832735946439430
+    second: Snake_Assets_HojaCompleta_13
+  - first:
+      213: -7836553917594865547
+    second: Snake_Assets_HojaCompleta_14
+  - first:
+      213: 2271239195078527990
+    second: Snake_Assets_HojaCompleta_15
+  - first:
+      213: -6475591393484607879
+    second: Snake_Assets_HojaCompleta_16
+  - first:
+      213: -1156160017939926519
+    second: Snake_Assets_HojaCompleta_17
+  - first:
+      213: -3280874373391143949
+    second: Snake_Assets_HojaCompleta_18
+  - first:
+      213: -3014087931645701710
+    second: Snake_Assets_HojaCompleta_19
+  - first:
+      213: 4859850857041889727
+    second: Snake_Assets_HojaCompleta_20
+  - first:
+      213: -4547611794239937402
+    second: Snake_Assets_HojaCompleta_21
+  - first:
+      213: -6751631164589964256
+    second: Snake_Assets_HojaCompleta_22
+  - first:
+      213: 3663575832999858179
+    second: Snake_Assets_HojaCompleta_23
+  - first:
+      213: 7381115948485191631
+    second: Snake_Assets_HojaCompleta_24
+  - first:
+      213: -4266921736064212375
+    second: Snake_Assets_HojaCompleta_25
+  - first:
+      213: -7126665972182088573
+    second: Snake_Assets_HojaCompleta_26
+  - first:
+      213: -1341720521081752291
+    second: Snake_Assets_HojaCompleta_27
+  - first:
+      213: 5465833371534258719
+    second: Snake_Assets_HojaCompleta_28
+  - first:
+      213: -5395254143151537179
+    second: Snake_Assets_HojaCompleta_29
+  - first:
+      213: 2686729783434104792
+    second: Snake_Assets_HojaCompleta_30
+  - first:
+      213: 6631228522638905418
+    second: Snake_Assets_HojaCompleta_31
+  - first:
+      213: -4048712704733339502
+    second: Snake_Assets_HojaCompleta_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1026
+        width: 44
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e027940e6e9c1ffd0800000000000000
+      internalID: -2309843140421783026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_1
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1030
+        width: 70
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d47317301e26d90800000000000000
+      internalID: -7105869857136620247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_2
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1061
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7301eb5104ffa3da0800000000000000
+      internalID: -5964174105791033289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_3
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 753
+        width: 297
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952306494b9932500800000000000000
+      internalID: 370308595237007961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_4
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1041
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4534c306d0aba5a40800000000000000
+      internalID: 5357799273322529620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_5
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 915
+        width: 106
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f100c68ee7024e70800000000000000
+      internalID: 9097842918286164466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1026
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2875306e4faee30800000000000000
+      internalID: 4533705243637547752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_7
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 753
+        width: 315
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31299ce61ddb517f0800000000000000
+      internalID: -642398664625909229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 780
+        width: 225
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d744a5ff5b12de0800000000000000
+      internalID: -1359605504153453187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_9
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 785
+        width: 221
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b7671d8fdf0a2650800000000000000
+      internalID: 6208792489102895031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_10
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 998
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01736befae093410800000000000000
+      internalID: 1457212103162294541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_11
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 516
+        width: 151
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4d0b4cf638e96e0800000000000000
+      internalID: -1828879882601311020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_12
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 728
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0992b927f3efc7a10800000000000000
+      internalID: 1908679890557413776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_13
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 270
+        width: 335
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b738ccce275b460800000000000000
+      internalID: 7256832735946439430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 574
+        width: 11
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570ff865bb7fe3390800000000000000
+      internalID: -7836553917594865547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_15
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 390
+        width: 201
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb899ea300158f10800000000000000
+      internalID: 2271239195078527990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_16
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 524
+        width: 172
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ee5c0dfe31226a0800000000000000
+      internalID: -6475591393484607879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_17
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 522
+        width: 195
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9027e2bd69e74ffe0800000000000000
+      internalID: -1156160017939926519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_18
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 276
+        width: 246
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fba655e32ef772d0800000000000000
+      internalID: -3280874373391143949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_19
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 289
+        width: 162
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b15778defecb26d0800000000000000
+      internalID: -3014087931645701710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_20
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 266
+        width: 162
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb90c5b1b98a17340800000000000000
+      internalID: 4859850857041889727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_21
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 266
+        width: 222
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684a3fbda23a3e0c0800000000000000
+      internalID: -4547611794239937402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_22
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 477
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024882c3a336d42a0800000000000000
+      internalID: -6751631164589964256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_23
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 289
+        width: 230
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30099a54fc2a7d230800000000000000
+      internalID: 3663575832999858179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_24
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 366
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc72e6b29ddfe6660800000000000000
+      internalID: 7381115948485191631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_25
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 321
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962ef75c949d8c4c0800000000000000
+      internalID: -4266921736064212375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_26
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 329
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38409379e0ff81d90800000000000000
+      internalID: -7126665972182088573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_27
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 44
+        width: 179
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15f1197b40416de0800000000000000
+      internalID: -1341720521081752291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_28
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 44
+        width: 205
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1276cffd7a8adb40800000000000000
+      internalID: 5465833371534258719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_29
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 33
+        width: 185
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e38f7c21f43025b0800000000000000
+      internalID: -5395254143151537179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_30
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 23
+        width: 206
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df4d0dc08e294520800000000000000
+      internalID: 2686729783434104792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_31
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 65
+        width: 177
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a409454253bd60c50800000000000000
+      internalID: 6631228522638905418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snake_Assets_HojaCompleta_32
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 48
+        width: 238
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29022ccfe3510d7c0800000000000000
+      internalID: -4048712704733339502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Snake_Assets_HojaCompleta_0: -2309843140421783026
+      Snake_Assets_HojaCompleta_1: -7105869857136620247
+      Snake_Assets_HojaCompleta_10: 1457212103162294541
+      Snake_Assets_HojaCompleta_11: -1828879882601311020
+      Snake_Assets_HojaCompleta_12: 1908679890557413776
+      Snake_Assets_HojaCompleta_13: 7256832735946439430
+      Snake_Assets_HojaCompleta_14: -7836553917594865547
+      Snake_Assets_HojaCompleta_15: 2271239195078527990
+      Snake_Assets_HojaCompleta_16: -6475591393484607879
+      Snake_Assets_HojaCompleta_17: -1156160017939926519
+      Snake_Assets_HojaCompleta_18: -3280874373391143949
+      Snake_Assets_HojaCompleta_19: -3014087931645701710
+      Snake_Assets_HojaCompleta_2: -5964174105791033289
+      Snake_Assets_HojaCompleta_20: 4859850857041889727
+      Snake_Assets_HojaCompleta_21: -4547611794239937402
+      Snake_Assets_HojaCompleta_22: -6751631164589964256
+      Snake_Assets_HojaCompleta_23: 3663575832999858179
+      Snake_Assets_HojaCompleta_24: 7381115948485191631
+      Snake_Assets_HojaCompleta_25: -4266921736064212375
+      Snake_Assets_HojaCompleta_26: -7126665972182088573
+      Snake_Assets_HojaCompleta_27: -1341720521081752291
+      Snake_Assets_HojaCompleta_28: 5465833371534258719
+      Snake_Assets_HojaCompleta_29: -5395254143151537179
+      Snake_Assets_HojaCompleta_3: 370308595237007961
+      Snake_Assets_HojaCompleta_30: 2686729783434104792
+      Snake_Assets_HojaCompleta_31: 6631228522638905418
+      Snake_Assets_HojaCompleta_32: -4048712704733339502
+      Snake_Assets_HojaCompleta_4: 5357799273322529620
+      Snake_Assets_HojaCompleta_5: 9097842918286164466
+      Snake_Assets_HojaCompleta_6: 4533705243637547752
+      Snake_Assets_HojaCompleta_7: -642398664625909229
+      Snake_Assets_HojaCompleta_8: -1359605504153453187
+      Snake_Assets_HojaCompleta_9: 6208792489102895031
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
