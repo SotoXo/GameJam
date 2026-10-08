@@ -1,0 +1,36 @@
+VIBORITA - UNITY 6000.3.16f1
+===============================
+
+Incluye:
+- Menú principal: JUGAR / INSTRUCCIONES / SALIR
+- Juego Snake básico
+- Flechas o W A S D
+- Manzana = +10 puntos y crecimiento
+- Colisión con borde o cuerpo = Game Over
+- Sonido original al comer
+- Sprites pixel art de la viborita
+- Botón de reintento y regreso al menú
+
+ABRIR:
+1. Descomprime esta carpeta.
+2. Unity Hub > Add/Open > selecciona Viborita_Unity6000.3.16f1.
+3. Abre con Unity 6000.3.16f1.
+4. Espera a que Unity termine de importar y compilar.
+5. La escena Main se crea automáticamente.
+6. Presiona Play.
+
+CREAR EL .EXE EN WINDOWS:
+Método rápido:
+- Menú superior de Unity > Viborita > Construir EXE Windows
+- Si tienes instalado Windows Build Support, Unity generará:
+  Builds/Windows/Viborita.exe
+
+Método normal:
+- File > Build Profiles
+- Windows
+- Build
+- Elige una carpeta.
+
+NOTA:
+El .exe no viene precompilado porque necesita el Unity Editor y el módulo
+Windows Build Support instalados en la máquina que realiza el build.
