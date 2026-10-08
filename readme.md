@@ -8,7 +8,7 @@ El objetivo del proyecto es desarrollar una versión sencilla y funcional del cl
 
 ## Estado del proyecto
 
-Actualmente se encuentran integrados los límites del escenario y la lógica básica de Snake.
+Actualmente se encuentran integrados los límites del escenario, la lógica básica de Snake y el menú principal.
 
 ### Implementado
 
@@ -23,6 +23,9 @@ Actualmente se encuentran integrados los límites del escenario y la lógica bá
 - Serpiente con movimiento automático por cuadrícula y controles de dirección.
 - Comida que aparece en celdas libres, crecimiento y puntuación de un punto por manzana.
 - Game Over al alcanzar el borde o el propio cuerpo, con reinicio mediante `R`.
+- Menú principal con Jugar, Instrucciones, Volver y Salir.
+- Flujo `Menu principal → SampleScene`, con retorno al menú mediante `ESC`.
+- Sonido `comer.wav` reproducido una vez por manzana consumida.
 - Control de versiones mediante Git y GitHub.
 - Rama `develop` utilizada para integrar el desarrollo.
 
@@ -58,6 +61,9 @@ GameJam/
 │
 ├── Assets/
 │   │
+│   ├── Audio/
+│   │   └── comer.wav
+│   │
 │   ├── Arte/
 │   │   ├── Fondo/
 │   │   │   ├── snake.jpg
@@ -68,9 +74,12 @@ GameJam/
 │   │       └── Snake_Assets_Completo (2).aseprite
 │   │
 │   ├── Scenes/
+│   │   ├── Menu principal.unity
 │   │   └── SampleScene.unity
 │   │
 │   ├── Scripts/
+│   │   ├── Menu/
+│   │   │   └── ControladorMenu.cs
 │   │   └── Serpiente/
 │   │       └── ControladorSerpiente.cs
 │   │
@@ -134,6 +143,33 @@ SampleScene
 │   └── Cola
 └── Comida
 ```
+
+---
+
+### Menú principal
+
+La escena de inicio del Build es `Assets/Scenes/Menu principal.unity` (índice 0). La escena de juego sigue siendo `Assets/Scenes/SampleScene.unity` (índice 1), con `ControladorSerpiente` como única lógica activa de Snake.
+
+Se recuperó únicamente la escena del menú y su `.meta` de `origin/feature/menu-vicente`, conservando su GUID. Esa versión contenía solo `Main Camera`; los paneles y botones se añadieron para completar el menú. Aunque la rama contiene recursos de TextMesh Pro, la escena original no los utiliza. La interfaz usa uGUI y la fuente integrada de Unity, sin importar esos recursos ni cambiar paquetes.
+
+El encabezado muestra `SNAKE` como título grande y `By: Jarvis` inmediatamente debajo, más pequeño y centrado. La pantalla principal contiene únicamente ese encabezado y los botones **JUGAR**, **INSTRUCCIONES** y **SALIR**. No hay subtítulo promocional ni texto debajo de los botones; los controles se muestran solamente dentro de **INSTRUCCIONES**. **VOLVER** pertenece al panel de instrucciones.
+
+- **JUGAR:** carga `SampleScene` en modo `Single`.
+- **INSTRUCCIONES:** muestra cómo moverse con WASD o flechas, comer para crecer, evitar paredes y cuerpo, reiniciar con `R` después de Game Over y regresar al menú con `ESC`.
+- **VOLVER:** cierra las instrucciones y muestra los botones del menú.
+- **SALIR:** llama a `Application.Quit()`. El cierre de la aplicación debe comprobarse en un Build; Unity ignora esta llamada en el Editor.
+
+Los eventos de los botones están asignados en el Inspector a `Assets/Scripts/Menu/ControladorMenu.cs`. El `EventSystem` utiliza `InputSystemUIInputModule` y las acciones UI del recurso existente `Assets/InputSystem_Actions.inputactions`.
+
+Durante la partida o después de Game Over, `ESC` carga `Menu principal` en modo `Single`, descargando la escena de juego. Al pulsar Jugar de nuevo se carga una partida nueva. No se usan objetos persistentes para mantener la partida en el menú.
+
+```text
+Menu principal → JUGAR → SampleScene
+      ↑                      │
+      └──────── ESC ──────────┘
+```
+
+En Unity 6.3 las escenas se gestionan desde Build Profiles. Este proyecto utiliza la lista global de `ProjectSettings/EditorBuildSettings.asset`; no había un perfil activo que sobrescribiera esa lista al realizar la integración.
 
 ---
 
@@ -234,7 +270,13 @@ Hay Game Over si la siguiente celda de la cabeza está fuera de esa cuadrícula 
 
 ## Controles y reglas
 
-- `W` o flecha arriba, `S` o flecha abajo, `A` o flecha izquierda, `D` o flecha derecha: cambiar dirección. No se permite girar 180° en un paso.
+- `W` / `↑`: arriba.
+- `S` / `↓`: abajo.
+- `A` / `←`: izquierda.
+- `D` / `→`: derecha.
+- `R`: reiniciar después de Game Over.
+- `ESC`: volver al menú, durante la partida o después de Game Over.
+- No se permite girar 180° en un paso.
 - La serpiente se mueve automáticamente a intervalos regulares. `Pasos Por Segundo` y `Tamano Celda` se pueden ajustar desde el Inspector de `Serpiente`.
 - La manzana roja aparece solo en celdas libres. Al comerla, la serpiente conserva la posición anterior de la cola como segmento nuevo, suma **1 punto** y genera otra manzana.
 - La puntuación se muestra en pantalla. Al perder, el movimiento se detiene y aparece `GAME OVER`.
@@ -251,7 +293,9 @@ Sprites utilizados: `Cabeza_Arriba`, `Cabeza_Abajo`, `Cabeza_Izquierda`, `Cabeza
 El flujo implementado para Snake es:
 
 ```text
-Inicio
+Menú principal
+  ↓ JUGAR
+SampleScene
   ↓
 Aparece la serpiente
   ↓
@@ -295,6 +339,8 @@ Esto permite mantener un registro de qué elementos fueron desarrollados por el 
 ## Hoja de sprites de Snake
 
 La hoja se encuentra en `Assets/Arte/Sprite/Snake_Assets_Completo (2).aseprite` y su lienzo mide **1448 × 1086 píxeles**. Se importa con el importador de Aseprite de Unity en modo **Sprite Sheet**, usando Sprite Editor / SpriteRects sobre la textura generada por Unity.
+
+Los sprites y diseños de la serpiente son recursos gráficos propios del equipo. No proceden de una fuente externa: la hoja y sus sprites fueron creados específicamente para este proyecto. Su autoría es independiente de la procedencia externa del fondo `snake.jpg`, documentada más abajo.
 
 Configuración de importación:
 
@@ -341,6 +387,16 @@ La publicación consultada no especifica una licencia de uso para la imagen.
 Por este motivo, la documentación únicamente registra el lugar desde el cual se obtuvo el recurso y no atribuye la autoría original de la imagen al usuario que la compartió.
 
 Si el proyecto requiriera posteriormente una distribución pública o comercial, se recomienda verificar los derechos del recurso o reemplazarlo por uno con una licencia claramente especificada.
+
+---
+
+### Audio
+
+`Assets/Audio/comer.wav` es un recurso de audio existente dentro del repositorio del proyecto. Se recuperó desde `origin/main` junto con su `.meta` original, conservando el GUID `7bed5e16a458b5645b1f560acffe496b`.
+
+Uso: sonido reproducido una sola vez cuando la serpiente consume una manzana. `ControladorSerpiente` tiene el `AudioClip` asignado en `sonidoComer` desde el Inspector y utiliza el `AudioSource` del objeto `Serpiente`, referenciado en `fuenteAudio`, mediante `PlayOneShot`. La fuente es 2D, con `Play On Awake` y `Loop` desactivados. La reproducción no cambia el movimiento, crecimiento, puntuación ni reinicio.
+
+Su procedencia y licencia no están documentadas en los archivos revisados; no se atribuye autor, fuente ni licencia. No se añadieron sonidos de Game Over, botones, fondo ni movimiento.
 
 ---
 

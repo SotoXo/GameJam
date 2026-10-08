@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ControladorSerpiente : MonoBehaviour
 {
@@ -34,6 +35,10 @@ public class ControladorSerpiente : MonoBehaviour
 
     [Header("Comida")]
     [SerializeField] private Sprite manzanaRoja;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip sonidoComer;
+    [SerializeField] private AudioSource fuenteAudio;
 
     private readonly List<SpriteRenderer> partes = new List<SpriteRenderer>();
     private readonly List<Vector2Int> celdas = new List<Vector2Int>();
@@ -107,6 +112,12 @@ public class ControladorSerpiente : MonoBehaviour
     {
         Keyboard teclado = Keyboard.current;
 
+        if (teclado != null && teclado.escapeKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("Menu principal", LoadSceneMode.Single);
+            return;
+        }
+
         if (gameOver)
         {
             if (teclado != null && teclado.rKey.wasPressedThisFrame)
@@ -178,6 +189,9 @@ public class ControladorSerpiente : MonoBehaviour
             partes.Add(nuevoRenderer);
             celdas.Add(colaAnterior);
             puntos++;
+
+            if (sonidoComer != null && fuenteAudio != null)
+                fuenteAudio.PlayOneShot(sonidoComer);
             if (!GenerarComida())
                 gameOver = true;
         }
